@@ -8,7 +8,8 @@ export default defineEventHandler(async (event) => {
     const body: GeminiReq = await readBody(event)
     const {model, messages} = body
 
-    const m = genAI.getGenerativeModel({model, safetySettings})
+    // const m = genAI.getGenerativeModel({model, safetySettings})
+    const m = genAI.getGenerativeModel({model, safetySettings}, {apiVersion: 'v1beta'})
     let msg = messages.slice(1)
     let flag = ['user', 'assistant']
     for (let i = 0; i < msg.length; i++) {
