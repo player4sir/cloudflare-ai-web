@@ -50,7 +50,7 @@ export default defineNuxtConfig({
         vueI18n: './i18n.config.ts',
         strategy: 'no_prefix',
         defaultLocale: 'zh',
-    }
+    },
     nitro: {
         vercel: {
             regions: ["cle1", "iad1", "pdx1", "sfo1", "sin1", "syd1", "hnd1", "kix1"]
